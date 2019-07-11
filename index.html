@@ -150,49 +150,7 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p>####递推与递归</p>
-<p>####前缀和与差分</p>
-<h4 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h4><p>####排序</p>
-<p>####倍增</p>
-<p>####贪心</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-位运算实际应用" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/04/位运算实际应用/">位运算实际应用</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/04/位运算实际应用/" class="article-date">
-  <time datetime="2019-07-04T02:14:45.000Z" itemprop="datePublished">2019-07-04</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="位运算的应用"><a href="#位运算的应用" class="headerlink" title="位运算的应用"></a>位运算的应用</h3><p>左移：&lt;&lt; 低位补零</p>
+        <h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p>左移：&lt;&lt; 低位补零</p>
 <p>右移：&gt;&gt; 从低位开始舍弃</p>
 <p>判断当前位是否为1: <font color="red">&amp; 1</font></p>
 <p>将第n位变成1： <font color="red"> + ( 1 &lt;&lt; n)</font></p>
@@ -208,10 +166,13 @@
 <p>思路：dfs，用当前位的01判断是否选取当前数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> cur,<span class="keyword">int</span> state)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>((state &gt;&gt; i) &amp; <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    dfs(cur + <span class="number">1</span>,state);</span><br><span class="line">    dfs(cur + <span class="number">1</span>,state + (<span class="number">1</span> &lt;&lt; cur));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
 </li>
 </ul>
+<p>####递推与递归</p>
+<p>####前缀和与差分</p>
+<h4 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h4><p>####排序</p>
+<p>####倍增</p>
+<p>####贪心</p>
 
       
     </div>
@@ -300,7 +261,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 10px;">offer</a>
+      <a href="/tags/ACM/" style="font-size: 10px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 10px;">offer</a>
     </div>
   </div>
 
@@ -326,10 +287,6 @@
         
           <li>
             <a href="/2019/07/07/算法竞赛进阶指南学习笔记——基本算法/">算法竞赛进阶指南学习笔记——基本算法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/04/位运算实际应用/">位运算实际应用</a>
           </li>
         
           <li>
