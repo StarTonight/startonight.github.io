@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>还没想好标题的记录 | startonight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="7.15div2 1189 A、B、CC：前缀和。a1,a2 (a1 + a2) % 10 (a + b) % 10 = (a % 10 + b % 10) % 10 rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest 123456789101112131415161718192021222324252627282930313233343536#inclu">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="还没想好标题的记录">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/还没想好标题的记录/index.html">
+<meta property="og:site_name" content="startonight">
+<meta property="og:description" content="7.15div2 1189 A、B、CC：前缀和。a1,a2 (a1 + a2) % 10 (a + b) % 10 = (a % 10 + b % 10) % 10 rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest 123456789101112131415161718192021222324252627282930313233343536#inclu">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-15T10:16:16.830Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="还没想好标题的记录">
+<meta name="twitter:description" content="7.15div2 1189 A、B、CC：前缀和。a1,a2 (a1 + a2) % 10 (a + b) % 10 = (a % 10 + b % 10) % 10 rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest 123456789101112131415161718192021222324252627282930313233343536#inclu">
+  
+    <link rel="alternate" href="/atom.xml" title="startonight" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/bg3.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-还没想好标题的记录" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      还没想好标题的记录
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/15/还没想好标题的记录/" class="article-date">
+  <time datetime="2019-07-15T01:53:51.000Z" itemprop="datePublished">2019-07-15</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="7-15"><a href="#7-15" class="headerlink" title="7.15"></a>7.15</h2><h4 id="div2-1189-A、B、C"><a href="#div2-1189-A、B、C" class="headerlink" title="div2 1189 A、B、C"></a>div2 1189 A、B、C</h4><p>C：前缀和。a1,a2</p>
+<p>(a1 + a2) % 10</p>
+<p>(a + b) % 10 = (a % 10 + b % 10) % 10</p>
+<p>rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,s[<span class="number">100005</span>],q,sum[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">question</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r;</span><br><span class="line">&#125;question;</span><br><span class="line"></span><br><span class="line">question qu[<span class="number">100005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        s[i] = s[i] + s[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; qu[i].l &gt;&gt; qu[i].r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (s[qu[i].r - <span class="number">1</span>] - s[qu[i].l - <span class="number">2</span>] ) / <span class="number">10</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="div2-1191-A、B"><a href="#div2-1191-A、B" class="headerlink" title="div2 1191 A、B"></a>div2 1191 A、B</h4><p>没啥好说的。。。</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/12/范霖听力笔记/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">范霖听力笔记</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/bg5.png" title="头像"></img>
+    <h3 class="avatar-name">
+      
+        墨
+      
+    </h3>
+    <p class="avatar-slogan">
+      卑微墨墨想拿offer
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/">ACM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offer/">offer</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 20px;">offer</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/15/还没想好标题的记录/">还没想好标题的记录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/范霖听力笔记/">范霖听力笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/11/李世优写作笔记/">李世优写作笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/07/算法竞赛进阶指南学习笔记——基本算法/">算法竞赛进阶指南学习笔记——基本算法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/02/July/">July</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

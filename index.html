@@ -63,6 +63,50 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-还没想好标题的记录" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/15/还没想好标题的记录/">还没想好标题的记录</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/15/还没想好标题的记录/" class="article-date">
+  <time datetime="2019-07-15T01:53:51.000Z" itemprop="datePublished">2019-07-15</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="7-15"><a href="#7-15" class="headerlink" title="7.15"></a>7.15</h2><h4 id="div2-1189-A、B、C"><a href="#div2-1189-A、B、C" class="headerlink" title="div2 1189 A、B、C"></a>div2 1189 A、B、C</h4><p>C：前缀和。a1,a2</p>
+<p>(a1 + a2) % 10</p>
+<p>(a + b) % 10 = (a % 10 + b % 10) % 10</p>
+<p>rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,s[<span class="number">100005</span>],q,sum[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">question</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r;</span><br><span class="line">&#125;question;</span><br><span class="line"></span><br><span class="line">question qu[<span class="number">100005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        s[i] = s[i] + s[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; qu[i].l &gt;&gt; qu[i].r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (s[qu[i].r - <span class="number">1</span>] - s[qu[i].l - <span class="number">2</span>] ) / <span class="number">10</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="div2-1191-A、B"><a href="#div2-1191-A、B" class="headerlink" title="div2 1191 A、B"></a>div2 1191 A、B</h4><p>没啥好说的。。。</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-范霖听力笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -350,7 +394,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACM/" style="font-size: 10px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 20px;">offer</a>
+      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 20px;">offer</a>
     </div>
   </div>
 
@@ -369,6 +413,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/15/还没想好标题的记录/">还没想好标题的记录</a>
+          </li>
         
           <li>
             <a href="/2019/07/12/范霖听力笔记/">范霖听力笔记</a>
