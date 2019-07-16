@@ -69,15 +69,15 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/15/还没想好标题的记录/">还没想好标题的记录</a>
+      <a class="article-title" href="/2019/07/16/还没想好标题的记录/">还没想好标题的记录</a>
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/07/15/还没想好标题的记录/" class="article-date">
-  <time datetime="2019-07-15T01:53:51.000Z" itemprop="datePublished">2019-07-15</time>
+    <a href="/2019/07/16/还没想好标题的记录/" class="article-date">
+  <time datetime="2019-07-16T14:33:51.000Z" itemprop="datePublished">2019-07-16</time>
 </a>
     
     
@@ -90,13 +90,133 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h2 id="7-15"><a href="#7-15" class="headerlink" title="7.15"></a>7.15</h2><h4 id="div2-1189-A、B、C"><a href="#div2-1189-A、B、C" class="headerlink" title="div2 1189 A、B、C"></a>div2 1189 A、B、C</h4><p>C：前缀和。a1,a2</p>
+        <h2 id="7-15"><a href="#7-15" class="headerlink" title="7.15"></a>7.15</h2><h4 id="div2-1189-A、B、C"><a href="#div2-1189-A、B、C" class="headerlink" title="div2 1189  A、B、C"></a>div2 1189  A、B、C</h4><p>C：前缀和。a1,a2</p>
 <p>(a1 + a2) % 10</p>
 <p>(a + b) % 10 = (a % 10 + b % 10) % 10</p>
 <p>rest = sum % 10(余数)，sum（和） = 10ans（糖果数） + rest</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,s[<span class="number">100005</span>],q,sum[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">question</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r;</span><br><span class="line">&#125;question;</span><br><span class="line"></span><br><span class="line">question qu[<span class="number">100005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        s[i] = s[i] + s[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; qu[i].l &gt;&gt; qu[i].r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; q;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (s[qu[i].r - <span class="number">1</span>] - s[qu[i].l - <span class="number">2</span>] ) / <span class="number">10</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="div2-1191-A、B"><a href="#div2-1191-A、B" class="headerlink" title="div2 1191 A、B"></a>div2 1191 A、B</h4><p>没啥好说的。。。</p>
+<h2 id="7-16"><a href="#7-16" class="headerlink" title="7.16"></a>7.16</h2><h4 id="div2-1194-A、B、C"><a href="#div2-1194-A、B、C" class="headerlink" title="div2 1194 A、B、C"></a>div2 1194 A、B、C</h4><p>B卡了神奇的bug。。。</p>
+<p>C：1.s的种类比t多 2.t的种类比s+p多 3.种类一样个数不够 4.顺序不匹配</p>
+<h2 id="7-17"><a href="#7-17" class="headerlink" title="7.17"></a>7.17</h2><h4 id="div2-1187-A、B、C"><a href="#div2-1187-A、B、C" class="headerlink" title="div2 1187 A、B、C"></a>div2 1187 A、B、C</h4>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-新东方阅读笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/16/新东方阅读笔记/">新东方阅读笔记</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/16/新东方阅读笔记/" class="article-date">
+  <time datetime="2019-07-16T02:25:32.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/offer/">offer</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="新东方阅读"><a href="#新东方阅读" class="headerlink" title="新东方阅读"></a>新东方阅读</h2><p>阅读特点：</p>
+<blockquote>
+<ol>
+<li>阅读给出了标题</li>
+<li>文章700 - 1000词</li>
+<li>词汇量</li>
+<li>客观题为主（字面意思 / 言下之意</li>
+<li>出题顺序基本和文章议论顺序一样</li>
+<li>句子解析能力，段落结构</li>
+<li>五种代表性题型：句子简化题（找同义句） / 插入文本题 / 修辞题（还原作者角度） / 总结题 / 图表题</li>
+<li>原文和答案的匹配关系（AA对应 / AB对应 / A“X”对应）</li>
+</ol>
+</blockquote>
+<p>做阅读步骤：</p>
+<blockquote>
+<ol>
+<li>看题干提取关键信息</li>
+<li>精确定位到原文中的句子，准确翻译</li>
+<li>提取原文逻辑，看选项，推导检查是否符合题干</li>
+</ol>
+</blockquote>
+<p>阅读选项的构成：</p>
+<p><font color="red">选项和题目一定是映射关系</font></p>
+<blockquote>
+<ol>
+<li>正确选项</li>
+<li>搭配选项（一眼排除的</li>
+<li>模糊选项</li>
+</ol>
+</blockquote>
+<h4 id="1-句子简化题"><a href="#1-句子简化题" class="headerlink" title="1.句子简化题"></a>1.句子简化题</h4><p>题干特点：以下哪个句子和高亮的句子是一个意思。</p>
+<p>做题方法：</p>
+<blockquote>
+<ol>
+<li>划分句子</li>
+<li>组合句子</li>
+<li>和选项比较</li>
+</ol>
+</blockquote>
+<p>托福单句阅读能力解析：</p>
+<ol>
+<li><p>介词：除了of，前后是一个整体，其余的介词两边分为两个部分</p>
+<p>A of B 的翻译</p>
+<ul>
+<li>a是名词：b的a</li>
+<li>a不是名词：a的b</li>
+</ul>
+<p>A of B of C of D </p>
+<ul>
+<li>a是名词：d的c的b的a</li>
+<li>a不是名词：d的c的a的b</li>
+</ul>
+</li>
+<li><p>动词：（和非谓语）遇到动词拆分</p>
+</li>
+<li><p>连接词</p>
+</li>
+<li><p>连词（单连词、双连词），连词前后：单复数、词性一样，意思相似</p>
+</li>
+<li><p>标点符号</p>
+<ul>
+<li>a，b和a；b互相解释</li>
+<li>a——b和 a：b，b解释a</li>
+<li>出现了两个相同标点符号：有动词就看整体，没动词就可以忽略（一定是用来解释前面的东西）</li>
+</ul>
+</li>
+<li><p>if / unless</p>
+<ul>
+<li>if a，b。a只是可能性，不是事实性</li>
+</ul>
+</li>
+<li><p>比较级结构</p>
+<ul>
+<li>a …… rather than b：a是重点，b不用看</li>
+<li>a …… but b：b是重点，不看a</li>
+<li>a is preferred to b：a是重点</li>
+<li>a is …… than b：a是重点</li>
+<li>a is as …… as b： a是重点</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -394,7 +514,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 20px;">offer</a>
+      <a href="/tags/ACM/" style="font-size: 15px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 20px;">offer</a>
     </div>
   </div>
 
@@ -415,7 +535,11 @@
       <ul>
         
           <li>
-            <a href="/2019/07/15/还没想好标题的记录/">还没想好标题的记录</a>
+            <a href="/2019/07/16/还没想好标题的记录/">还没想好标题的记录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/16/新东方阅读笔记/">新东方阅读笔记</a>
           </li>
         
           <li>
@@ -428,10 +552,6 @@
         
           <li>
             <a href="/2019/07/07/算法竞赛进阶指南学习笔记——基本算法/">算法竞赛进阶指南学习笔记——基本算法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/02/July/">July</a>
           </li>
         
       </ul>
