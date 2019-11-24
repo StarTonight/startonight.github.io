@@ -63,6 +63,47 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-牛客寒假算法训练营2" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/24/牛客寒假算法训练营2/">牛客寒假算法训练营2</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/24/牛客寒假算法训练营2/" class="article-date">
+  <time datetime="2019-11-24T12:48:33.000Z" itemprop="datePublished">2019-11-24</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h5 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h5><p>每个砝码都有三个选择，放左边、放右边、不放，类比二进制，转换成三进制排列1，3，9，27。</p>
+<p>long double 表示范围到10^4000</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	<span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">double</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">double</span> ans = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">double</span> i = <span class="number">1</span>;;i ++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(ans &gt;= n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		ans *= <span class="number">3</span>;</span><br><span class="line">		ans ++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-java课堂笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -484,59 +525,6 @@
 </article>
 
   
-    <article id="post-李世优写作笔记——独立写作" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/11/李世优写作笔记——独立写作/">李世优写作笔记——独立写作</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/11/李世优写作笔记——独立写作/" class="article-date">
-  <time datetime="2019-07-11T12:36:09.000Z" itemprop="datePublished">2019-07-11</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/offer/">offer</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h2 id="李世优写作"><a href="#李世优写作" class="headerlink" title="李世优写作"></a>李世优写作</h2><ul>
-<li>考试安排：</li>
-</ul>
-<blockquote>
-<p>上半场：阅读 + 听力，十分钟休息<br>下半场：口语 + 写作</p>
-</blockquote>
-<ul>
-<li>托福写作：</li>
-</ul>
-<blockquote>
-<p>综合写作（20分钟，150 - 225词），阅读后听材料，再写作<br>+<br>独立写作（30分钟，300词）</p>
-</blockquote>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/11/李世优写作笔记——独立写作/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -590,7 +578,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -600,6 +588,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/11/24/牛客寒假算法训练营2/">牛客寒假算法训练营2</a>
+          </li>
         
           <li>
             <a href="/2019/09/03/java课堂笔记/">java课堂笔记</a>
@@ -615,10 +607,6 @@
         
           <li>
             <a href="/2019/07/28/洛谷普及场/">洛谷普及场</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/23/单词收录/">单词收录</a>
           </li>
         
       </ul>
