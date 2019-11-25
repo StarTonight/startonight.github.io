@@ -90,11 +90,14 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h5 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h5><p>每个砝码都有三个选择，放左边、放右边、不放，类比二进制，转换成三进制排列1，3，9，27。</p>
+        <h5 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h5><p>每个砝码都有三个选择，放左边1、放右边2、不放0，可表示的最大的数是全2，转换成三进制排列1，3，9，27。</p>
 <p>long double 表示范围到10^4000</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">	freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	<span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">double</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">double</span> ans = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">double</span> i = <span class="number">1</span>;;i ++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(ans &gt;= n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		ans *= <span class="number">3</span>;</span><br><span class="line">		ans ++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <p class="article-more-link">
+            <a href="/2019/11/24/牛客寒假算法训练营2/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
