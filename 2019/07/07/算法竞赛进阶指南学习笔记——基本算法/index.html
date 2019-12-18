@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>算法竞赛进阶指南学习笔记——基本算法 | startonight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="位运算左移：&amp;lt;&amp;lt; 低位补零 右移：&amp;gt;&amp;gt; 从低位开始舍弃 判断当前位是否为1: &amp;amp; 1 将第n位变成1：  + ( 1 &amp;lt;&amp;lt; n)">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法竞赛进阶指南学习笔记——基本算法">
+<meta property="og:url" content="http://yoursite.com/2019/07/07/算法竞赛进阶指南学习笔记——基本算法/index.html">
+<meta property="og:site_name" content="startonight">
+<meta property="og:description" content="位运算左移：&amp;lt;&amp;lt; 低位补零 右移：&amp;gt;&amp;gt; 从低位开始舍弃 判断当前位是否为1: &amp;amp; 1 将第n位变成1：  + ( 1 &amp;lt;&amp;lt; n)">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-23T13:25:10.784Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法竞赛进阶指南学习笔记——基本算法">
+<meta name="twitter:description" content="位运算左移：&amp;lt;&amp;lt; 低位补零 右移：&amp;gt;&amp;gt; 从低位开始舍弃 判断当前位是否为1: &amp;amp; 1 将第n位变成1：  + ( 1 &amp;lt;&amp;lt; n)">
+  
+    <link rel="alternate" href="/atom.xml" title="startonight" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/bg3.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-算法竞赛进阶指南学习笔记——基本算法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      算法竞赛进阶指南学习笔记——基本算法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/07/算法竞赛进阶指南学习笔记——基本算法/" class="article-date">
+  <time datetime="2019-07-07T12:16:29.000Z" itemprop="datePublished">2019-07-07</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p>左移：&lt;&lt; 低位补零</p>
+<p>右移：&gt;&gt; 从低位开始舍弃</p>
+<p>判断当前位是否为1: <font color="red">&amp; 1</font></p>
+<p>将第n位变成1： <font color="red"> + ( 1 &lt;&lt; n)</font></p>
+<a id="more"></a>
+
+<ul>
+<li><p>ksm</p>
+<p>思路：a^b即b个a相乘。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">ksm</span><span class="params">(ll a,ll b,ll mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res = <span class="number">1</span> % p;</span><br><span class="line">    <span class="keyword">while</span>(b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b &amp; <span class="number">1</span>)</span><br><span class="line">            res = res * a % p;</span><br><span class="line">        a = a * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>类似应用：a * b（a个b相加）</p>
+</li>
+<li><p>记录状态</p>
+<p>从 1~n 这 n 个整数中随机选取任意多个，输出所有可能的选择方案。</p>
+<p>思路：dfs，用当前位的01判断是否选取当前数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> cur,<span class="keyword">int</span> state)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>((state &gt;&gt; i) &amp; <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    dfs(cur + <span class="number">1</span>,state);</span><br><span class="line">    dfs(cur + <span class="number">1</span>,state + (<span class="number">1</span> &lt;&lt; cur));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="递推与递归"><a href="#递推与递归" class="headerlink" title="递推与递归"></a>递推与递归</h4><h4 id="前缀和与差分"><a href="#前缀和与差分" class="headerlink" title="前缀和与差分"></a>前缀和与差分</h4><h4 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h4><h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="倍增"><a href="#倍增" class="headerlink" title="倍增"></a>倍增</h4><h4 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h4>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/11/李世优写作笔记——独立写作/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            李世优写作笔记——独立写作
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/02/July/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">July</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/bg5.png" title="头像"></img>
+    <h3 class="avatar-name">
+      
+        墨
+      
+    </h3>
+    <p class="avatar-slogan">
+      你眼中有星辰大海，胜过我见过的所有春花秋月
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/">ACM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offer/">offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂七杂八/">杂七杂八</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 15px;">offer</a> <a href="/tags/杂七杂八/" style="font-size: 10px;">杂七杂八</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/17/2019牛客寒假算法基础训练营1/">2019牛客寒假算法基础训练营1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/24/2019牛客寒假算法基础训练营2/">2019牛客寒假算法基础训练营2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/环境配置/">环境配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/洛谷普及场/">洛谷普及场</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/23/单词收录/">单词收录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
