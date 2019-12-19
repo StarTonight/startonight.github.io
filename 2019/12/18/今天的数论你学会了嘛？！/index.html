@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="startonight">
 <meta property="og:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910111213#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)&amp;#123;        if(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-18T13:08:44.135Z">
+<meta property="og:updated_time" content="2019-12-19T13:36:08.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="今天的数论你学会了嘛？！">
 <meta name="twitter:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910111213#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)&amp;#123;        if(">
@@ -131,7 +131,52 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ex_gcd</span><span class="params">(ll a,ll b,ll&amp; d,ll&amp; x,ll&amp; y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!b)&#123;</span><br><span class="line">        d = a;x = <span class="number">1</span>;y = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ex_gcd(b,a % b,d,y,x);</span><br><span class="line">        y -= x * (a / b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="数论四大定理"><a href="#数论四大定理" class="headerlink" title="数论四大定理"></a>数论四大定理</h5><p>威尔逊定理、欧拉定理、中国剩余定理（孙子定理）、费马小定理</p>
-<h5 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h5><h5 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h5><h5 id="大组合数（卢卡斯定理"><a href="#大组合数（卢卡斯定理" class="headerlink" title="大组合数（卢卡斯定理"></a>大组合数（卢卡斯定理</h5><h5 id="指数对数"><a href="#指数对数" class="headerlink" title="指数对数"></a>指数对数</h5><h5 id="康托展开"><a href="#康托展开" class="headerlink" title="康托展开"></a>康托展开</h5><h5 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h5><h5 id="欧拉"><a href="#欧拉" class="headerlink" title="欧拉"></a>欧拉</h5><h5 id="抽屉原理（鸽巢定理"><a href="#抽屉原理（鸽巢定理" class="headerlink" title="抽屉原理（鸽巢定理"></a>抽屉原理（鸽巢定理</h5><h5 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h5><h5 id="置换群与polya定理"><a href="#置换群与polya定理" class="headerlink" title="置换群与polya定理"></a>置换群与polya定理</h5><h5 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h5><h5 id="二项式反演"><a href="#二项式反演" class="headerlink" title="二项式反演"></a>二项式反演</h5><h5 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h5>
+<p>威尔逊定理</p>
+<blockquote>
+<p>当且仅当p为质数：( p -1 )!  ≡  -1 ( mod p )</p>
+<p>即p为质数时能被(p - 1)! + 1整除</p>
+</blockquote>
+<p>欧拉定理</p>
+<blockquote>
+<p>若n,a为正整数，且n,a互质，即gcd(a,n) = 1，则a^φ(n) ≡ 1 (mod n)</p>
+<p>φ(n) 是欧拉函数，是求 1到n - 1 中 与n互质的数的数目</p>
+</blockquote>
+<p>中国剩余定理</p>
+<blockquote>
+<p>给出一元线性同余方程：</p>
+<p>x mod m<sub>1</sub> = a<sub>1</sub><br>x mod m<sub>2</sub> = a<sub>2</sub><br>x mod m<sub>n</sub>  = a<sub>n</sub></p>
+<p>中国剩余定理说明：假设整数m<sub>1</sub>,m<sub>2</sub>, … ,m<sub>n</sub>两两互质，则对任意的整数：a<sub>1</sub>,a<sub>2</sub>, … ,a<sub>n</sub>，方程组 (S)有解</p>
+</blockquote>
+<p>费马小定理</p>
+<blockquote>
+<p>p是质数，不能整除a，则a<sup>(p - 1)</sup> mod p = 1，能整除，则a<sup>(p - 1)</sup> mod p = 0</p>
+<p>即，若p是质数，且a,p互质，那么 a的(p-1)次方除以p的余数恒等于1。</p>
+<p>费马大定理，断言当整数n &gt; 2时，关于x, y, z的方程 x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup> 没有正整数解</p>
+</blockquote>
+<h5 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h5><p>逆元类似于倒数。</p>
+<p>a,p互质时， a * x mod p = 1，x即a关于p的逆元，用inv(a) 表示。</p>
+<p>(a  /  b) % p = (a * inv(b) ) % p = (a % p * inv(b) % p) % p</p>
+<p>逆元求法一：</p>
+<p>用费马小定理，a<sup>(p - 1)</sup> mod p = 1，两边同除a得a<sup>(p - 2)</sup> mod p = 1 / a，</p>
+<p>写作：a<sup>(p - 2)</sup> mod p = inv(a) </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function">ll <span class="title">ksm</span><span class="params">(ll a,ll b,ll p)</span></span>&#123;</span><br><span class="line">    ll res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b &amp; <span class="number">1</span>)</span><br><span class="line">            res = (res * a) % p;</span><br><span class="line">        a = (a * a) % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">Fermat</span><span class="params">(ll a, ll p)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ksm(a, p<span class="number">-2</span>, p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>逆元求法二：</p>
+<p>拓展欧几里得：a * x + b * y = 1，a，b互质时定有解，x即inv(a)，y即inv(b)</p>
+<p>证明：</p>
+<blockquote>
+<p>ax % b + by % b = 1 % b</p>
+<p>ax % b = 1 % b</p>
+<p>ax = 1 (mod b)</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ex_gcd</span><span class="params">(ll a,ll b,ll&amp; d,ll&amp; x,ll&amp; y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!b)&#123;</span><br><span class="line">        d = a;x = <span class="number">1</span>;y = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        ex_gcd(b,a % b,d,y,x);</span><br><span class="line">        y -= x * (a / b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a,ll p)</span></span>&#123;</span><br><span class="line">    ll d,x,y;</span><br><span class="line">    ex_gcd(a,p,d,x,y);</span><br><span class="line">    <span class="keyword">return</span> d == <span class="number">1</span> ? (x % p + p) % p : <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>逆元求法三：</p>
+<p>当p是个质数的时候有，inv(a) = (p - p / a) * inv(p % a) % p</p>
+<p>递归</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll t, ll p)</span> </span>&#123;<span class="comment">//求t关于p的逆元，注意:t要小于p，最好传参前先把t%p一下 </span></span><br><span class="line">    <span class="keyword">return</span> t == <span class="number">1</span> ? <span class="number">1</span> : (p - p / t) * inv(p % t, p) % p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h5><h5 id="大组合数（卢卡斯定理"><a href="#大组合数（卢卡斯定理" class="headerlink" title="大组合数（卢卡斯定理"></a>大组合数（卢卡斯定理</h5><h5 id="指数对数"><a href="#指数对数" class="headerlink" title="指数对数"></a>指数对数</h5><h5 id="康托展开"><a href="#康托展开" class="headerlink" title="康托展开"></a>康托展开</h5><h5 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h5><h5 id="欧拉"><a href="#欧拉" class="headerlink" title="欧拉"></a>欧拉</h5><h5 id="抽屉原理（鸽巢定理"><a href="#抽屉原理（鸽巢定理" class="headerlink" title="抽屉原理（鸽巢定理"></a>抽屉原理（鸽巢定理</h5><h5 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h5><h5 id="置换群与polya定理"><a href="#置换群与polya定理" class="headerlink" title="置换群与polya定理"></a>置换群与polya定理</h5><h5 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h5><h5 id="二项式反演"><a href="#二项式反演" class="headerlink" title="二项式反演"></a>二项式反演</h5><h5 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h5>
       
     </div>
     
