@@ -63,6 +63,49 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-今天的数论你学会了嘛？！" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/20/今天的数论你学会了嘛？！/">今天的数论你学会了嘛？！</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/20/今天的数论你学会了嘛？！/" class="article-date">
+  <time datetime="2019-12-20T11:32:44.000Z" itemprop="datePublished">2019-12-20</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/板子/">板子</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="素筛"><a href="#素筛" class="headerlink" title="素筛"></a>素筛</h3><p>埃氏筛法：一个质数的倍数都不是质数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1e5 + 5</span></span><br><span class="line"><span class="keyword">bool</span> is_prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt; N;i ++)</span><br><span class="line">        is_prime[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt; N;i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(is_prime[i])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i * i;j &lt; N;j += i)&#123;</span><br><span class="line">                is_prime[j] = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/12/20/今天的数论你学会了嘛？！/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-面积公式？啥公式？" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -202,49 +245,6 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-今天的数论你学会了嘛？！" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/18/今天的数论你学会了嘛？！/">今天的数论你学会了嘛？！</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/12/18/今天的数论你学会了嘛？！/" class="article-date">
-  <time datetime="2019-12-18T11:32:44.000Z" itemprop="datePublished">2019-12-18</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/板子/">板子</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="素筛"><a href="#素筛" class="headerlink" title="素筛"></a>素筛</h3><p>埃氏筛法：一个质数的倍数都不是质数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1e5 + 5</span></span><br><span class="line"><span class="keyword">bool</span> is_prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt; N;i ++)</span><br><span class="line">        is_prime[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt; N;i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(is_prime[i])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i * i;j &lt; N;j += i)&#123;</span><br><span class="line">                is_prime[j] = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2019/12/18/今天的数论你学会了嘛？！/#more">阅读全文</a>
-          </p>
         
       
     </div>
@@ -429,25 +429,25 @@
 </article>
 
   
-    <article id="post-单词收录" class="article global-container article-type-post" itemscope itemprop="blogPost">
+    <article id="post-7-22-7-28-刷题记录" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/单词收录/">单词收录</a>
+      <a class="article-title" href="/2019/07/22/7-22-7-28-刷题记录/">7.22 - 7.28 刷题记录 </a>
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/07/23/单词收录/" class="article-date">
-  <time datetime="2019-07-23T10:16:32.000Z" itemprop="datePublished">2019-07-23</time>
+    <a href="/2019/07/22/7-22-7-28-刷题记录/" class="article-date">
+  <time datetime="2019-07-22T06:47:33.000Z" itemprop="datePublished">2019-07-22</time>
 </a>
     
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/offer/">offer</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li></ul>
 
   </div>
   
@@ -456,9 +456,12 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>beneficial / detrimental      有益的 / 有害的</p>
-<p>benign / malignant       良性的 / 恶性的</p>
-
+        <h4 id="7-24"><a href="#7-24" class="headerlink" title="7.24"></a>7.24</h4><h6 id="div2-1185-A、B、C1"><a href="#div2-1185-A、B、C1" class="headerlink" title="div2 1185 A、B、C1"></a>div2 1185 A、B、C1</h6><p>B：以一个字符串为基准，与另一个字符串逐个比较</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/07/22/7-22-7-28-刷题记录/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -502,7 +505,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/">ACM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/offer/">offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂七杂八/">杂七杂八</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/板子/">板子</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/">ACM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂七杂八/">杂七杂八</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/板子/">板子</a></li></ul>
     </div>
   </div>
 
@@ -512,7 +515,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/offer/" style="font-size: 13.33px;">offer</a> <a href="/tags/杂七杂八/" style="font-size: 10px;">杂七杂八</a> <a href="/tags/板子/" style="font-size: 16.67px;">板子</a>
+      <a href="/tags/ACM/" style="font-size: 20px;">ACM</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/杂七杂八/" style="font-size: 10px;">杂七杂八</a> <a href="/tags/板子/" style="font-size: 15px;">板子</a>
     </div>
   </div>
 
@@ -533,6 +536,10 @@
       <ul>
         
           <li>
+            <a href="/2019/12/20/今天的数论你学会了嘛？！/">今天的数论你学会了嘛？！</a>
+          </li>
+        
+          <li>
             <a href="/2019/12/18/面积公式？啥公式？/">面积公式？啥公式？</a>
           </li>
         
@@ -546,10 +553,6 @@
         
           <li>
             <a href="/2019/12/18/不学dp刷什么剧/">不学dp刷什么剧</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/18/今天的数论你学会了嘛？！/">今天的数论你学会了嘛？！</a>
           </li>
         
       </ul>
