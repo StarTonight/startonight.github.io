@@ -10,18 +10,18 @@
   
   
   
-  <meta name="description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910111213#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)&amp;#123;        if(">
+  <meta name="description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)        if(is_prime[i])">
 <meta name="keywords" content="板子">
 <meta property="og:type" content="article">
 <meta property="og:title" content="今天的数论你学会了嘛？！">
 <meta property="og:url" content="http://yoursite.com/2019/12/20/今天的数论你学会了嘛？！/index.html">
 <meta property="og:site_name" content="startonight">
-<meta property="og:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910111213#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)&amp;#123;        if(">
+<meta property="og:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)        if(is_prime[i])">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-20T11:55:48.271Z">
+<meta property="og:updated_time" content="2019-12-20T12:01:25.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="今天的数论你学会了嘛？！">
-<meta name="twitter:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910111213#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)&amp;#123;        if(">
+<meta name="twitter:description" content="素筛埃氏筛法：一个质数的倍数都不是质数 12345678910#define N 1e5 + 5bool is_prime[N];void init()&amp;#123;    for(int i = 2;i &amp;lt; N;i ++)        is_prime[i] = true;    for(int i = 2;i * i &amp;lt; N;i ++)        if(is_prime[i])">
   
     <link rel="alternate" href="/atom.xml" title="startonight" type="application/atom+xml">
   
@@ -98,7 +98,7 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <h3 id="素筛"><a href="#素筛" class="headerlink" title="素筛"></a>素筛</h3><p>埃氏筛法：一个质数的倍数都不是质数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1e5 + 5</span></span><br><span class="line"><span class="keyword">bool</span> is_prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt; N;i ++)</span><br><span class="line">        is_prime[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt; N;i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(is_prime[i])&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i * i;j &lt; N;j += i)&#123;</span><br><span class="line">                is_prime[j] = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1e5 + 5</span></span><br><span class="line"><span class="keyword">bool</span> is_prime[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt; N;i ++)</span><br><span class="line">        is_prime[i] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i * i &lt; N;i ++)</span><br><span class="line">        <span class="keyword">if</span>(is_prime[i])</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i * i;j &lt; N;j += i)</span><br><span class="line">                is_prime[j] = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
